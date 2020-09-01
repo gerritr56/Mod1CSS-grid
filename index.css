@@ -1,0 +1,133 @@
+
+
+body {
+    background-color: rgb(238, 234, 175);
+}
+
+.container {
+    padding: 10px;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-rows: 50px 400px 100px 50px ;
+}
+
+.header {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    padding: 10px;
+    background-color: rgb(187, 178, 247);
+}
+
+.main {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    padding: 10px;
+    background-color: rgb(174, 248, 174);
+}
+
+.widget {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    padding: 10px;
+    background-color: rgb(241, 151, 196);
+}
+
+.footer {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    padding: 10px;
+    background-color: rgb(121, 129, 240);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(158, 156, 156);
+    }
+    .container > div {
+        
+        font-size: 2em;
+        color: #ffeead;
+    }
+    
+    .container {
+        padding: 10px;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px 500px 150px 100px ;
+        grid-template-areas: 
+            "h h h"
+            "m m m"
+            "w w w"
+            "f f f";
+    }
+
+    .header {
+        grid-area: h;
+    }
+
+    .main {
+        grid-area: m;
+    }
+    
+    .widget {
+        grid-area: w;
+    }
+    
+    .footer {
+        grid-area: f;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: rgb(158, 156, 156);
+    }
+    .container > div {
+        
+        font-size: 2em;
+        color: #ffeead;
+    }
+    
+    .container {
+        padding: 10px;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 500px 150px 100px ;
+        grid-template-areas: 
+            "h m m"
+            "h w w"
+            "h f f";
+    }
+
+    .header {
+        grid-area: h;
+    }
+
+    .main {
+        grid-area: m;
+    }
+    
+    .widget {
+        grid-area: w;
+    }
+    
+    .footer {
+        grid-area: f;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: rgb(202, 236, 215);
+    }
+
+    .container > div {     
+        font-size: 2em;
+        color: #ffeead;
+    }
+    
+    .container {
+        grid-template-areas: 
+            "h m w"
+            "h m w"
+            "h f w";
+    }
+}
